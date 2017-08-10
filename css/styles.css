@@ -30,7 +30,7 @@
   font-family: 'Raleway-ExtraBold';
   text-transform: capitalize;
   font-size: 60px;
-  padding: 40px 10px;
+  padding: 50px 10px;
   text-align: center;
 }
 .section-text-mobile {
@@ -44,7 +44,7 @@
 }
 .section-text-desktop {
   font-family: 'Raleway-Light';
-  font-size: 24px;
+  font-size: 16px;
   padding: 30px;
   text-align: justify;
   max-width: 500px;
@@ -141,6 +141,13 @@ body .top {
 }
 body header {
   width: 100%;
+  height: 150px;
+}
+@media all and (min-width: 992px) {
+  body header {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 body header div {
   position: relative;
@@ -154,7 +161,12 @@ body header div {
     background-position: center right 60px;
   }
 }
-body .btn-menu {
+@media all and (min-width: 992px) {
+  body header div {
+    background-position: center left 10%;
+  }
+}
+body header div .btn-menu {
   position: absolute;
   top: 35px;
   left: 20px;
@@ -167,11 +179,24 @@ body .btn-menu {
   border: none;
   outline: none;
 }
+@media all and (min-width: 992px) {
+  body header div .btn-menu {
+    display: none;
+    justify-content: flex-end;
+  }
+}
 body .nav {
-  display: flex;
-  flex-direction: column;
-  min-height: 10vh;
+  position: relative;
+  z-index: 9999;
   background-color: #ffffff;
+}
+@media all and (min-width: 992px) {
+  body .nav {
+    display: flex;
+    background-color: transparent;
+    top: 25px;
+    right: 10%;
+  }
 }
 body .nav a {
   position: relative;
@@ -181,10 +206,20 @@ body .nav a {
   font-size: 24px;
   color: #262626;
 }
+@media all and (min-width: 992px) {
+  body .nav a {
+    font-size: 16px;
+  }
+}
 body .nav a li {
   margin: 10px 0;
   padding: 25px 20px;
   width: calc(60%);
+}
+@media all and (min-width: 992px) {
+  body .nav a li {
+    font-display: 25px 10px;
+  }
 }
 body .nav a .menu-one:hover::before {
   content: '';
@@ -194,6 +229,11 @@ body .nav a .menu-one:hover::before {
   border-top: 4px solid #ff6033;
   width: 70px;
 }
+@media all and (min-width: 992px) {
+  body .nav a .menu-one:hover::before {
+    width: 50px;
+  }
+}
 body .nav a .menu-two:hover::before {
   content: '';
   display: block;
@@ -201,6 +241,11 @@ body .nav a .menu-two:hover::before {
   top: 15px;
   border-top: 4px solid #ff6033;
   width: 85px;
+}
+@media all and (min-width: 992px) {
+  body .nav a .menu-two:hover::before {
+    width: 55px;
+  }
 }
 body .nav a .menu-three:hover::before {
   content: '';
@@ -210,6 +255,11 @@ body .nav a .menu-three:hover::before {
   border-top: 4px solid #ff6033;
   width: 110px;
 }
+@media all and (min-width: 992px) {
+  body .nav a .menu-three:hover::before {
+    width: 80px;
+  }
+}
 body .nav a .menu-four:hover::before {
   content: '';
   display: block;
@@ -217,6 +267,11 @@ body .nav a .menu-four:hover::before {
   top: 15px;
   border-top: 4px solid #ff6033;
   width: 115px;
+}
+@media all and (min-width: 992px) {
+  body .nav a .menu-four:hover::before {
+    width: 75px;
+  }
 }
 body .nav a .menu-five:hover::before {
   content: '';
@@ -226,6 +281,11 @@ body .nav a .menu-five:hover::before {
   border-top: 4px solid #ff6033;
   width: 70px;
 }
+@media all and (min-width: 992px) {
+  body .nav a .menu-five:hover::before {
+    width: 45px;
+  }
+}
 body .nav a .menu-six:hover::before {
   content: '';
   display: block;
@@ -234,11 +294,25 @@ body .nav a .menu-six:hover::before {
   border-top: 4px solid #ff6033;
   width: 115px;
 }
+@media all and (min-width: 992px) {
+  body .nav a .menu-six:hover::before {
+    width: 75px;
+  }
+}
 body .fresh-life {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media all and (min-width: 992px) {
+  body .fresh-life {
+    align-items: flex-start;
+    margin-left: 10%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 body .fresh-life .section-title {
   font-family: 'Raleway-ExtraBold';
@@ -254,8 +328,13 @@ body .fresh-life .section-title {
     font-family: 'Raleway-ExtraBold';
     text-transform: capitalize;
     font-size: 60px;
-    padding: 40px 10px;
+    padding: 50px 10px;
     text-align: center;
+  }
+}
+@media all and (min-width: 992px) {
+  body .fresh-life .section-title {
+    padding-left: 0;
   }
 }
 body .fresh-life .section-text {
@@ -271,12 +350,20 @@ body .fresh-life .section-text {
 @media all and (min-width: 768px) {
   body .fresh-life .section-text {
     font-family: 'Raleway-Light';
-    font-size: 24px;
+    font-size: 16px;
     padding: 30px;
     text-align: justify;
     max-width: 500px;
     margin: 10px 0;
     line-height: 36px;
+  }
+}
+@media all and (min-width: 992px) {
+  body .fresh-life .section-text {
+    padding-left: 0;
+    margin: 0;
+    padding: 0;
+    width: 400px;
   }
 }
 body .fresh-life button {
@@ -291,12 +378,23 @@ body .fresh-life button {
   outline: none;
   margin-bottom: 40px;
 }
+body .fresh-life button:hover {
+  cursor: pointer;
+}
 body .fresh-life button:active {
   box-shadow: 1px 2px 5px #000;
 }
 @media all and (min-width: 768px) {
   body .fresh-life button {
     margin: 40px 0;
+  }
+}
+@media all and (min-width: 992px) {
+  body .fresh-life button {
+    margin: 40px 0;
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
   }
 }
 body .about-us {
@@ -311,7 +409,28 @@ body .about-us {
     justify-content: center;
   }
 }
-body .about-us .section-title {
+@media all and (min-width: 992px) {
+  body .about-us {
+    align-items: flex-end;
+    background-image: url('../images/about-img.png');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: center left 10%;
+    text-align: center;
+  }
+}
+body .about-us .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media all and (min-width: 992px) {
+  body .about-us .text {
+    width: 50%;
+    margin-right: 5%;
+  }
+}
+body .about-us .text .section-title {
   font-family: 'Raleway-ExtraBold';
   text-transform: capitalize;
   font-size: 60px;
@@ -320,18 +439,13 @@ body .about-us .section-title {
   color: #ffffff;
 }
 @media all and (min-width: 768px) {
-  body .about-us .section-title {
+  body .about-us .text .section-title {
     font-family: 'Raleway-ExtraBold';
     text-transform: capitalize;
     font-size: 60px;
-    padding: 40px 10px;
+    padding: 50px 10px;
     text-align: center;
   }
-}
-body .about-us .text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 body .about-us .text .section-text {
   font-family: 'Raleway-Light';
@@ -343,10 +457,13 @@ body .about-us .text .section-text {
   line-height: 28px;
   color: #ffffff;
 }
+body .about-us .text .section-text:nth-child(2) {
+  margin-bottom: 40px;
+}
 @media all and (min-width: 768px) {
   body .about-us .text .section-text {
     font-family: 'Raleway-Light';
-    font-size: 24px;
+    font-size: 16px;
     padding: 30px;
     text-align: justify;
     max-width: 500px;
@@ -354,8 +471,11 @@ body .about-us .text .section-text {
     line-height: 36px;
   }
 }
-body .about-us .text .section-text:nth-child(2) {
-  margin-bottom: 40px;
+@media all and (min-width: 992px) {
+  body .about-us .text .section-text {
+    width: 400px;
+    padding: 0;
+  }
 }
 body .our-services {
   min-height: 100vh;
@@ -367,6 +487,15 @@ body .our-services {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+}
+@media all and (min-width: 992px) {
+  body .our-services {
+    display: flex;
+    flex-direction: row-reverse;
+    background-image: url('../images/tomato.png');
+    background-repeat: no-repeat;
+    background-position: center right 20%;
   }
 }
 body .our-services .section-title {
@@ -382,14 +511,24 @@ body .our-services .section-title {
     font-family: 'Raleway-ExtraBold';
     text-transform: capitalize;
     font-size: 60px;
-    padding: 40px 10px;
+    padding: 50px 10px;
     text-align: center;
+  }
+}
+@media all and (min-width: 992px) {
+  body .our-services .section-title {
+    width: 40%;
   }
 }
 body .our-services .services {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media all and (min-width: 992px) {
+  body .our-services .services {
+    width: 40%;
+  }
 }
 body .our-services .services .service {
   display: flex;
@@ -517,7 +656,7 @@ body .gallery .section-title {
     font-family: 'Raleway-ExtraBold';
     text-transform: capitalize;
     font-size: 60px;
-    padding: 40px 10px;
+    padding: 50px 10px;
     text-align: center;
   }
 }
@@ -534,7 +673,7 @@ body .gallery .section-text {
 @media all and (min-width: 768px) {
   body .gallery .section-text {
     font-family: 'Raleway-Light';
-    font-size: 24px;
+    font-size: 16px;
     padding: 30px;
     text-align: justify;
     max-width: 500px;
@@ -542,18 +681,55 @@ body .gallery .section-text {
     line-height: 36px;
   }
 }
+@media all and (min-width: 992px) {
+  body .gallery .section-text {
+    width: 500px;
+  }
+}
 body .gallery .images {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+@media all and (min-width: 1200px) {
+  body .gallery .images {
+    display: block;
+    position: relative;
+    width: 1170px;
+  }
+}
 body .gallery .images img {
+  float: left;
   width: 280px;
   margin: 20px 0;
 }
 @media all and (min-width: 768px) {
   body .gallery .images img {
     width: 560px;
+  }
+}
+@media all and (min-width: 1200px) {
+  body .gallery .images img {
+    margin: 0 0;
+  }
+  body .gallery .images img:nth-child(1) {
+    width: 770px;
+  }
+  body .gallery .images img:nth-child(2),
+  body .gallery .images img:nth-child(3) {
+    width: 370px;
+    margin-left: 30px;
+  }
+  body .gallery .images img:nth-child(3) {
+    margin-top: 30px;
+  }
+  body .gallery .images img:nth-child(4),
+  body .gallery .images img:nth-child(5) {
+    width: 570px;
+    margin-top: 30px;
+  }
+  body .gallery .images img:nth-child(5) {
+    margin-left: 30px;
   }
 }
 body .gallery button {
@@ -573,6 +749,9 @@ body .gallery button {
     margin-top: 40px;
     margin-bottom: 40px;
   }
+}
+body .gallery button:hover {
+  cursor: pointer;
 }
 body .gallery button:active {
   box-shadow: 1px 2px 5px #000;
@@ -608,7 +787,7 @@ body .subscribe .section-title {
     font-family: 'Raleway-ExtraBold';
     text-transform: capitalize;
     font-size: 60px;
-    padding: 40px 10px;
+    padding: 50px 10px;
     text-align: center;
   }
 }
@@ -625,7 +804,7 @@ body .subscribe .section-text {
 @media all and (min-width: 767px) {
   body .subscribe .section-text {
     font-family: 'Raleway-Light';
-    font-size: 24px;
+    font-size: 16px;
     padding: 30px;
     text-align: justify;
     max-width: 500px;
@@ -676,6 +855,9 @@ body .subscribe .subscribe-form input[type='submit'] {
     align-self: flex-start;
   }
 }
+body .subscribe .subscribe-form input[type='submit']:hover {
+  cursor: pointer;
+}
 body .subscribe .subscribe-form input[type='submit']:active {
   box-shadow: 1px 2px 5px #000;
 }
@@ -699,7 +881,7 @@ body .blog .section-title {
     font-family: 'Raleway-ExtraBold';
     text-transform: capitalize;
     font-size: 60px;
-    padding: 40px 10px;
+    padding: 50px 10px;
     text-align: center;
   }
 }
@@ -716,7 +898,7 @@ body .blog .section-text {
 @media all and (min-width: 767px) {
   body .blog .section-text {
     font-family: 'Raleway-Light';
-    font-size: 24px;
+    font-size: 16px;
     padding: 30px;
     text-align: justify;
     max-width: 500px;
@@ -864,6 +1046,9 @@ body .blog button {
     margin: 40px 0;
   }
 }
+body .blog button:hover {
+  cursor: pointer;
+}
 body .blog button:active {
   box-shadow: 1px 2px 5px #000;
 }
@@ -891,7 +1076,7 @@ body .contact .section-title {
     font-family: 'Raleway-ExtraBold';
     text-transform: capitalize;
     font-size: 60px;
-    padding: 40px 10px;
+    padding: 50px 10px;
     text-align: center;
   }
 }
@@ -908,7 +1093,7 @@ body .contact .section-text {
 @media all and (min-width: 767px) {
   body .contact .section-text {
     font-family: 'Raleway-Light';
-    font-size: 24px;
+    font-size: 16px;
     padding: 30px;
     text-align: justify;
     max-width: 500px;
@@ -960,6 +1145,7 @@ body .contact .block .form-contact textarea {
   resize: none;
   outline: none;
   color: #fff;
+  border: none;
 }
 @media all and (min-width: 992px) {
   body .contact .block .form-contact textarea {
