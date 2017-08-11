@@ -210,22 +210,25 @@ body {
                 border: none;
                 outline: none;
                 
+                &:hover {
+                    cursor: pointer;
+                }
+                
                 @media all and (min-width: 992px) {
                     display: none;
                     justify-content: flex-end;
-                }
-                
+                }              
             }
         }
     }
     
     .nav {
+        display: none;
         position: relative;
-        z-index: 9999;
         background-color: rgb(255,255,255);
         
         @media all and (min-width: 992px) {
-            display: flex;
+            display: flex !important;
             background-color: transparent;
             top: 25px;
             right: 10%;
@@ -249,7 +252,7 @@ body {
                 width: calc(100% - 40px);
                 
                 @media all and (min-width: 992px) {
-                    font-display: 25px 10px;
+                    
                 }
                 
             }
@@ -685,6 +688,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         
         @media all and (min-width: 768px) {
             background-image: url('../images/subscribe-mobile.jpg');
@@ -696,12 +700,22 @@ body {
             justify-content: center;
         }
         
+        @media all and (min-width: 992px) {
+            background-position: center right 10%;
+            align-items: flex-start;
+            margin-left: 10%;
+        }
+        
         .section-title {
             .section-title-mobile;
             color: @font-color-title;
             
             @media all and (min-width: 767px) {
                 .section-title-desktop;
+            }
+            
+             @media all and (min-width: 992px) {
+                padding-left: 0;
             }
         }
         
@@ -711,6 +725,10 @@ body {
             
             @media all and (min-width: 767px) {
                 .section-text-desktop;
+            }
+            
+             @media all and (min-width: 992px) {
+                padding-left: 0;
             }
         }
         
@@ -722,6 +740,11 @@ body {
             
             @media all and (min-width: 768px) {
                 width: 500px;
+            }
+            
+            @media all and (min-width: 992px) {
+                flex-direction: row;
+                margin-bottom: 40px;
             }
             
             input[type='text'] {
@@ -755,6 +778,14 @@ body {
                     align-self: flex-start;
                 }
                 
+                @media all and (min-width: 992px) {
+                    flex-direction: row;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    margin-left: 30px;
+                    font-size: 16px;
+                }
+                
                 &:hover {
                     cursor: pointer;
                 }
@@ -772,6 +803,7 @@ body {
         align-items: center;
         min-height: 100vh;
         background-color: #b07cf7;
+        
         
         .section-title {
             .section-title-mobile;
@@ -796,6 +828,10 @@ body {
             flex-direction: column;
             align-items: center;
             
+            @media all and (min-width: 1200px) {
+               flex-direction: row;
+            }
+            
             .article {
                 position: relative;
                 height: 251px;
@@ -806,6 +842,10 @@ body {
                 @media all and (min-width: 767px) {
                     width: 370px;
                     height: 310px;
+                }
+                
+                @media all and (min-width: 1200px) {
+                   margin: 0 20px;
                 }
                 
                 &:hover {
@@ -924,21 +964,17 @@ body {
         }
         
         .block {
-            width: 100%;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: center;    
             
             @media all and (min-width: 992px) {
                 flex-direction: row;
-                justify-content: space-around;
+                margin-bottom: 40px;
             }
             
             .form-contact {
-                
-                @media all and (max-width: 991px) {
-                    width: 80%;
-                }
+                width: 100%;
 
                 input[type='text'] {
                     display: block;
@@ -953,6 +989,10 @@ body {
 
                     @media all and (min-width: 992px) {
                         width: 500px;
+                        
+                        &:nth-child(1) {
+                            margin-top: 0;
+                        }
                     }
                 }
             
@@ -975,10 +1015,13 @@ body {
             }
         
             .info {
-                padding: 40px 0;
-                @media all and (max-width: 991px) {
-                    width: 80%;
-                    align-self: center;
+                display: flex;
+                flex-direction: column;
+                align-self: flex-start;
+                
+                @media all and (min-width: 992px) {
+                    width: 50%;
+                    margin-left: 5%;
                 }
                 
                     div {
@@ -991,6 +1034,10 @@ body {
                         font-family: @font-Bold;
                         font-size: 32px;
                         color: #262626;
+                        
+                         @media all and (min-width: 992px) {
+                            padding-top: 0;
+                        }
                     }
 
                     p {
